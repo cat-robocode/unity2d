@@ -9,12 +9,14 @@ public class PlayerController : MonoBehaviour
     private float _screenWidth;
     [SerializeField] private Text score;
     public int rubyCount = 0;
+    private Animator _playerAnimator;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         _rb2d = gameObject.GetComponent<Rigidbody2D>();
         _screenWidth = Camera.main.orthographicSize * Camera.main.aspect;
+        _playerAnimator = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -49,5 +51,15 @@ public class PlayerController : MonoBehaviour
     {
         rubyCount++;
         score.text = rubyCount.ToString();
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.GetComponent<Platform>())
+        {
+            if (collision.relativeVelocity.y >= 0f)
+            {
+                _playerAnimator.SetTrigger("canJump");
+            }
+        }
     }
 }

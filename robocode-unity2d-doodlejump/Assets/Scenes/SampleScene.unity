@@ -264,6 +264,7 @@ GameObject:
   - component: {fileID: 306218238}
   - component: {fileID: 306218237}
   - component: {fileID: 306218239}
+  - component: {fileID: 306218240}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -424,6 +425,28 @@ MonoBehaviour:
   _directionMove: 0
   score: {fileID: 1270711850}
   rubyCount: 0
+--- !u!95 &306218240
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306218234}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6925b1564d017c5499d7b417b7a76c04, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &434446090
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,7 +631,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.11320752, g: 0.07028569, b: 0.049661785, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
